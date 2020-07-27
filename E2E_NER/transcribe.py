@@ -111,7 +111,6 @@ if __name__ == '__main__':
 
 
 
-
     trans = decode_results(decoded_output, decoded_offsets)[0]['transcription']
     offsets_ = decode_results(decoded_output, decoded_offsets)[0]['offsets']
     if not args.offsets: print(trans)
