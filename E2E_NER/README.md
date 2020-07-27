@@ -1,3 +1,5 @@
+Thanks to raotnameh for this code. This is only a forked.
+
 *<sub>This code is heavily based on the **[SeanNaren's](https://github.com/SeanNaren/deepspeech.pytorch)** Deepspeech2 (DS2) pytorch implementation. We highly recommend to go take a look at his repo for deeper understanding and any issue.</sub>*
 
 ### Building it from Source
