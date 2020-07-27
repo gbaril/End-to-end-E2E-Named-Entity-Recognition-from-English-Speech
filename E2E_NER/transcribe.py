@@ -55,7 +55,6 @@ def transcribe(audio_path, spect_parser, model, decoder, device, use_half):
         spect = spect.half()
     input_sizes = torch.IntTensor([spect.size(3)]).int()
     out, output_sizes = model(spect, input_sizes)
-    # print(out.shape[1])
     with open("out.txt","wb") as f:
         pickle.dump(out.cpu().detach().numpy(),f)
     decoded_output, decoded_offsets = decoder.decode(out, output_sizes)
@@ -117,4 +116,3 @@ if __name__ == '__main__':
     offsets_ = decode_results(decoded_output, decoded_offsets)[0]['offsets']
     if not args.offsets: print(trans)
     else: print_offssets_format(trans, offsets_, out_shape, duration)
-
